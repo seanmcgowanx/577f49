@@ -82,7 +82,7 @@ To extend the project with new form nodes, follow these steps:
 
 1. **API Update**: The API must be updated to include new form nodes, edges, and forms. This involves adding the new form nodes and defining the relationships (edges, forms) between them in the API.
 2. **Code Handling**: Once the API is updated with the new form nodes, the existing frontend code will automatically handle the rendering and prefill logic for the new nodes and forms. No further code changes are needed in the frontend for the new form nodes to be supported.
-
+```
 ## What patterns should I be paying attention to?
 
 When reviewing the project, the following patterns are crucial to focus on to ensure maintainability, scalability, and clean code practices:
