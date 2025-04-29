@@ -27,7 +27,7 @@ This project reimplements a portion of the Journey Builder app by Avantos, focus
    The mock server (`frontendchallengeserver`) is expected to be located in the root directory of your project. If it's already cloned:
 
    ```bash
-   cd ../frontendchallengeserver
+   cd frontendchallengeserver
    npm install
    npm start
    ```
@@ -39,7 +39,7 @@ This project reimplements a portion of the Journey Builder app by Avantos, focus
    In a separate terminal, return to the main project folder and run:
 
    ```bash
-   cd ../avantos-challenge
+   cd 577f49
    npm start
    ```
 
