@@ -49,6 +49,14 @@ This project reimplements a portion of the Journey Builder app by Avantos, focus
 
    Open [http://localhost:3000](http://localhost:3000) in your browser.
 
+## Runing Tests
+
+**Run the core functionality tests for this application**
+
+```bash
+npm test
+```
+
 ## How to Extend the Project with New Data Sources
 
 **Adding New Global Data Sources**
