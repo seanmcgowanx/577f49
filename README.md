@@ -9,8 +9,8 @@ This project reimplements a portion of the Journey Builder app by Avantos, focus
 - **Node-based UI**: Display nodes and edges based on data fetched from the `action-blueprint-graph-get` API.
 - **Form Prefill**: View and edit prefill mappings for form fields, where values from one form can populate fields in downstream forms.
 - **Data Sources**:
-  - Form fields from directly and transitively dependent forms.
-  - Global data .
+  - Form fields from directly and transitively dependent forms
+  - Global data 
 
 ## Installation
 
@@ -49,7 +49,7 @@ This project reimplements a portion of the Journey Builder app by Avantos, focus
 
    Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-## Runing Tests
+## Running Tests
 
 **Run the core functionality tests for this application**
 
