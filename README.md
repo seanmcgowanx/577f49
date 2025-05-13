@@ -22,18 +22,6 @@ This project reimplements a portion of the Journey Builder app by Avantos, focus
    npm install
    ```
 
-2. **Start the mock API server:**
-
-   The mock server (`frontendchallengeserver`) is expected to be located in the root directory of your project. If it's already cloned:
-
-   ```bash
-   cd frontendchallengeserver
-   npm install
-   npm start
-   ```
-
-   This will start the mock server on [http://localhost:3002](http://localhost:3002).
-
 3. **Start the development server:**
 
    In a separate terminal, return to the main project folder and run:
