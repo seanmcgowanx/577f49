@@ -25,7 +25,7 @@ const DAGViewer = () => {
     useEffect(() => {
         const fetchGraph = async () => {
             try {
-                const response = await fetch("/api/v1/123/actions/blueprints/bp_456/bpv_123/graph");
+                const response = await fetch("https://frontendchallengeserver.onrender.com//api/v1/123/actions/blueprints/bp_456/bpv_123/graph");
                 const data = await response.json();
 
                 const formattedNodes = data.nodes.map((node: any) => ({
