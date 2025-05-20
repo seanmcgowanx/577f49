@@ -9,6 +9,7 @@ import { nanoid } from 'nanoid';
 import PrefillPanel from './PrefillPanel';
 import ConfigurationModal from './ConfigurationModal';
 import { CustomNodeData, NodeFieldMapping, PrefillMapping } from '../types';
+import '../App.css'
 
 const DAGViewer = () => {
     // ===== State =====
@@ -20,10 +21,12 @@ const DAGViewer = () => {
     const [formPrefillToggles, setFormPrefillToggles] = useState<{ [key: string]: boolean }>({});
     const [prefillMappings, setPrefillMappings] = useState<PrefillMapping[]>([]);
     const [editingField, setEditingField] = useState<string | null>(null);
+    const [loading, setLoading] = useState<boolean>(false)
 
     // ===== Fetch Graph on Mount =====
     useEffect(() => {
         const fetchGraph = async () => {
+            setLoading(true)
             try {
                 const response = await fetch("https://frontendchallengeserver.onrender.com//api/v1/123/actions/blueprints/bp_456/bpv_123/graph");
                 const data = await response.json();
@@ -61,8 +64,10 @@ const DAGViewer = () => {
                 setEdges(formattedEdges);
                 setNodeFieldsMappings(nodeFieldsMapping);
                 setFormPrefillToggles(formPrefillToggleState);
+                setLoading(false)
             } catch (err) {
                 console.error("Error fetching graph:", err);
+                setLoading(false)
             }
         };
 
@@ -165,6 +170,8 @@ const DAGViewer = () => {
     return (
         <div className="flow-container-wrapper">
             <div className="flow-container" data-testid="flow-container">
+                {loading &&
+                <h1 className='loading-message'>Hosted on Render’s free tier — may take up to 30 seconds to wake.</h1>}
                 <ReactFlow
                     nodes={nodes}
                     edges={edges}
